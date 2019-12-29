@@ -5,7 +5,7 @@ class ClickCounter extends Component
 {
   render() {
     return(
-<button onClick={this.props.incrementCount}>Hover{this.props.count} times</button>
+<button onClick={this.props.incrementCount}>Hover {this.props.count} times</button>
 
     );
   }
