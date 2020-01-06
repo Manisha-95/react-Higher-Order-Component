@@ -5,13 +5,7 @@ import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
-
+  
   render() {
     return (
       <div>
