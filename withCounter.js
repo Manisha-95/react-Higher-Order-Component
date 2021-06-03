@@ -1,30 +1,30 @@
-import React ,{ Component } from 'react';
+import React, { Component } from 'react';
 
-const UpdatedComponent = OriginalComponent => 
-{
-  class NewComponent extends Component{
-  constructor(){
-  console.log("[App.js] constructor");
-  this.state={
-    count:0
-  }
-  }
-  
-  
-  incrementCount=()=>{
-  this.setState(prevState =>
-  {
-    return {count:prevState.count+1}
-  })
-   }
+const UpdatedComponent = OriginalComponent => {
+  class NewComponent extends Component {
+    constructor() {
+      super();
+      console.log('[App.js] constructor');
+      this.state = {
+        count: 0
+      };
+    }
 
-    render()
-    {
-      return <OriginalComponent count={this.state.count}
-                                incrementCount={this.incrementCount}/>
+    incrementCount = () => {
+      this.setState(prevState => {
+        return { count: prevState.count + 1 };
+      });
+    };
+
+    render() {
+      return (
+        <OriginalComponent
+          count={this.state.count}
+          incrementCount={this.incrementCount}
+        />
+      );
     }
   }
-    return NewComponent
-  
-}
+  return NewComponent;
+};
 export default UpdatedComponent;
